@@ -6,16 +6,13 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+During my internship at **Amazon Web Services Vietnam Co., Ltd.** from **September 29, 2025** to **November 22, 2025**, I had the opportunity to learn, practice, and apply the knowledge I acquired at school to a real-world work environment.
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+I participated in **frontend development and backend testing**, thereby improving my skills in **programming, data analysis, report writing, and communication**.
 
-In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
+Regarding my work ethic, I always strived to complete tasks well, adhered to company regulations, and actively collaborated with colleagues to improve work efficiency.
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+To objectively reflect my internship experience, I would like to self-assess myself based on the following criteria:
 
 | No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
 | --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |

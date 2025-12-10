@@ -22,6 +22,7 @@ pre: "<b>2.</b>"
 - Landlords **lack analytical tools** regarding market demand and the number of views on listings to optimize rentals.
 
 *Solution*
+
 The **RoomMate** platform provides a centralized rental search and management solution, integrating an internal **mini-chat** and **automatic notifications** (via n8n) based on individual criteria.
 
 - **AWS Serverless Architecture**: Utilizes **API Gateway + Lambda, DynamoDB** (for room data, users, and chat), and S3 (for images) to ensure scalability at optimal cost (leveraging Free Tier).

@@ -22,6 +22,7 @@ pre: " <b> 2. </b> "
 - Chủ trọ **thiếu công cụ phân tích** về nhu cầu thị trường, số lượng người xem tin đăng để tối ưu hóa việc cho thuê. 
 
 *Giải pháp*  
+
 Nền tảng **RoomMate** cung cấp một giải pháp tìm kiếm và quản lý trọ tập trung, tích hợp tính năng **chat mini** nội bộ và **thông báo tự động** (qua n8n) dựa trên tiêu chí cá nhân.
 - **Kiến trúc Serverless AWS**: Sử dụng **API Gateway + Lambda, DynamoDB** (cho dữ liệu phòng, user, chat), và S3 (cho hình ảnh) để đảm bảo khả năng mở rộng (scale) với chi phí tối ưu (tận dụng Free Tier).
 - **Tính năng nổi bật**: Khác biệt so với các ứng dụng chat/rao vặt chung chung, **RoomMate** tập trung vào trải nghiệm tốt cho người thuê khi áp dụng chatbot AI để gợi ý các phòng trọ theo yêu cầu cá nhân.
@@ -107,7 +108,8 @@ Bảo mật & Giám sát
       - Kiểm thử chức năng và hiệu năng (unit test, integration test).
       - Khắc phục lỗi, tối ưu chi phí và tài nguyên.
       - Đưa hệ thống vào vận hành thử nghiệm (pilot).  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+- *Sau triển khai*: 
+  - Nghiên cứu thêm trong vòng 1 năm.  
   - Theo dõi, tối ưu và bảo trì hệ thống định kỳ.
   - Nghiên cứu thêm các dịch vụ nâng cao (Auto Scaling, WAF, CloudFormation, EKS…).
   - Đề xuất các cải tiến và tính năng mới dựa trên nhu cầu thực tế.
