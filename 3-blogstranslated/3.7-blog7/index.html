@@ -1,0 +1,344 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.134.3"><meta name=description content><meta name=author content="vynguyen08257@gmail.com"><link rel=icon href=../../images/favicon.png type=image/png><title>Blog 7 :: Internship Report</title>
+<link href=../../css/nucleus.css?1765465501 rel=stylesheet><link href=../../css/fontawesome-all.min.css?1765465501 rel=stylesheet><link href=../../css/hybrid.css?1765465501 rel=stylesheet><link href=../../css/featherlight.min.css?1765465501 rel=stylesheet><link href=../../css/perfect-scrollbar.min.css?1765465501 rel=stylesheet><link href=../../css/auto-complete.css?1765465501 rel=stylesheet><link href=../../css/atom-one-dark-reasonable.css?1765465501 rel=stylesheet><link href=../../css/theme.css?1765465501 rel=stylesheet><link href=../../css/hugo-theme.css?1765465501 rel=stylesheet><link href=../../css/theme-workshop.css?1765465501 rel=stylesheet><script src=../../js/jquery-3.3.1.min.js?1765465501></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=../../3-blogstranslated/3.7-blog7/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=../../><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff}.cls-2{fill:#f90;fill-rule:evenodd}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09 10.85a4.7 4.7.0 00.19 1.48 7.73 7.73.0 00.54 1.19.77.77.0 01.12.38.64.64.0 01-.32.49l-1 .7a.83.83.0 01-.44.15.69.69.0 01-.49-.23 3.8 3.8.0 01-.6-.77q-.25-.42-.51-1a6.14 6.14.0 01-4.89 2.3 4.54 4.54.0 01-3.32-1.19 4.27 4.27.0 01-1.22-3.2 4.28 4.28.0 011.46-3.4A6.06 6.06.0 017.69 6.46a12.47 12.47.0 011.76.13q.92.13 1.91.36V5.73a3.65 3.65.0 00-.79-2.66A3.81 3.81.0 007.86 2.3a7.71 7.71.0 00-1.79.22 12.78 12.78.0 00-1.79.57 4.55 4.55.0 01-.58.22h-.26q-.35.0-.35-.52V2a1.09 1.09.0 01.12-.58 1.2 1.2.0 01.47-.35A10.88 10.88.0 015.77.32 10.19 10.19.0 018.36.0a6 6 0 014.35 1.35 5.49 5.49.0 011.38 4.09zM7.34 13.38a5.36 5.36.0 001.72-.31A3.63 3.63.0 0010.63 12 2.62 2.62.0 0011.19 11a5.63 5.63.0 00.16-1.44v-.7a14.35 14.35.0 00-1.53-.28 12.37 12.37.0 00-1.56-.1 3.84 3.84.0 00-2.47.67A2.34 2.34.0 005 11a2.35 2.35.0 00.61 1.76A2.4 2.4.0 007.34 13.38zm13.35 1.8a1 1 0 01-.64-.16 1.3 1.3.0 01-.35-.65L15.81 1.51a3 3 0 01-.15-.67.36.36.0 01.41-.41H17.7a1 1 0 01.65.16 1.4 1.4.0 01.33.65l2.79 11 2.59-11A1.17 1.17.0 0124.39.6a1.1 1.1.0 01.67-.16H26.4a1.1 1.1.0 01.67.16 1.17 1.17.0 01.32.65L30 12.39 32.88 1.25A1.39 1.39.0 0133.22.6a1 1 0 01.65-.16h1.54a.36.36.0 01.41.41 1.36 1.36.0 010 .26 3.64 3.64.0 01-.12.41l-4 12.86a1.3 1.3.0 01-.35.65 1 1 0 01-.64.16H29.25a1 1 0 01-.67-.17 1.26 1.26.0 01-.32-.67L25.67 3.64l-2.56 10.7a1.26 1.26.0 01-.32.67 1 1 0 01-.67.17zm21.36.44a11.28 11.28.0 01-2.56-.29 7.44 7.44.0 01-1.92-.67 1 1 0 01-.61-.93v-.84q0-.52.38-.52a.9.9.0 01.31.06l.42.17a8.77 8.77.0 001.83.58 9.78 9.78.0 002 .2 4.48 4.48.0 002.43-.55 1.76 1.76.0 00.86-1.57 1.61 1.61.0 00-.45-1.16A4.29 4.29.0 0043 9.22l-2.41-.76A5.15 5.15.0 0138 6.78a3.94 3.94.0 01-.83-2.41 3.7 3.7.0 01.45-1.85 4.47 4.47.0 011.19-1.37 5.27 5.27.0 011.7-.86A7.4 7.4.0 0142.6.0a8.87 8.87.0 011.12.07q.57.07 1.08.19t.95.26a4.27 4.27.0 01.7.29 1.59 1.59.0 01.49.41.94.94.0 01.15.55v.79q0 .52-.38.52a1.76 1.76.0 01-.64-.2 7.74 7.74.0 00-3.2-.64 4.37 4.37.0 00-2.21.47 1.6 1.6.0 00-.79 1.48 1.58 1.58.0 00.49 1.18 4.94 4.94.0 001.83.92L44.55 7a5.08 5.08.0 012.57 1.6A3.76 3.76.0 0147.9 11a4.21 4.21.0 01-.44 1.93 4.4 4.4.0 01-1.21 1.47 5.43 5.43.0 01-1.85.93A8.25 8.25.0 0142.05 15.62z"/><path class="cls-2" d="M45.19 23.81C39.72 27.85 31.78 30 25 30A36.64 36.64.0 01.22 20.57c-.51-.46-.06-1.09.56-.74A49.78 49.78.0 0025.53 26.4 49.23 49.23.0 0044.4 22.53C45.32 22.14 46.1 23.14 45.19 23.81z"/><path class="cls-2" d="M47.47 21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74 3.13-2.2 8.27-1.57 8.86-.83s-.16 5.89-3.09 8.35c-.45.38-.88.18-.68-.32C46.69 25.8 48.17 22.11 47.47 21.21z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=../../js/lunr.min.js?1765465501></script><script type=text/javascript src=../../js/auto-complete.js?1765465501></script><script type=text/javascript>var baseurl="https://nguyenmaivy.github.io/nguyenmaivy/"</script><script type=text/javascript src=../../js/search.js?1765465501></script></div><div class=highlightable><ul class=topics><li data-nav-id=/1-worklog/ title=Worklog class=dd-item><a href=../../1-worklog/><b>1. </b>Worklog
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/1-worklog/1.1-week1/ title="Week 1 Worklog" class=dd-item><a href=../../1-worklog/1.1-week1/><b>1.1. </b>Week 1 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.2-week2/ title="Week 2 Worklog" class=dd-item><a href=../../1-worklog/1.2-week2/><b>1.2. </b>Week 2 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.3-week3/ title="Week 3 Worklog" class=dd-item><a href=../../1-worklog/1.3-week3/><b>1.3. </b>Week 3 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.4-week4/ title="Week 4 Worklog" class=dd-item><a href=../../1-worklog/1.4-week4/><b>1.4. </b>Week 4 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.5-week5/ title="Week 5 Worklog" class=dd-item><a href=../../1-worklog/1.5-week5/><b>1.5. </b>Week 5 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.6-week6/ title="Week 6 Worklog" class=dd-item><a href=../../1-worklog/1.6-week6/><b>1.6. </b>Week 6 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.7-week7/ title="Week 7 Worklog" class=dd-item><a href=../../1-worklog/1.7-week7/><b>1.7. </b>Week 7 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.8-week8/ title="Week 8 Worklog" class=dd-item><a href=../../1-worklog/1.8-week8/><b>1.8. </b>Week 8 Worklog
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.10-week10/ title="Worklog Week 10" class=dd-item><a href=../../1-worklog/1.10-week10/><b>1.10. </b>Worklog Week 10
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.9-week9/ title="Worklog Week 9" class=dd-item><a href=../../1-worklog/1.9-week9/><b>1.9. </b>Worklog Week 9
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-worklog/1.11-week11/ title="Worklog Week 11" class=dd-item><a href=../../1-worklog/1.11-week11/><b>1.11. </b>Worklog Week 11
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/2-proposal/ title=Proposal class=dd-item><a href=../../2-proposal/><b>2.</b>Proposal
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/ title="Translated Blogs" class="dd-item
+parent"><a href=../../3-blogstranslated/><b>3. </b>Translated Blogs
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/3-blogstranslated/3.1-blog1/ title="Blog 1" class=dd-item><a href=../../3-blogstranslated/3.1-blog1/><b>3.1. </b>Blog 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.2-blog2/ title="Blog 2" class=dd-item><a href=../../3-blogstranslated/3.2-blog2/><b>3.2. </b>Blog 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.3-blog3/ title="Blog 3" class=dd-item><a href=../../3-blogstranslated/3.3-blog3/><b>3.3. </b>Blog 3
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.4-blog4/ title="Blog 4" class=dd-item><a href=../../3-blogstranslated/3.4-blog4/><b>3.4. </b>Blog 4
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.5-blog5/ title="Blog 5" class=dd-item><a href=../../3-blogstranslated/3.5-blog5/><b>3.6. </b>Blog 5
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.6-blog6/ title="Blog 5" class=dd-item><a href=../../3-blogstranslated/3.6-blog6/><b>3.6. </b>Blog 5
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.7-blog7/ title="Blog 7" class="dd-item
+active"><a href=../../3-blogstranslated/3.7-blog7/><b>3.7. </b>Blog 7
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.8-blog8/ title="Blog 8" class=dd-item><a href=../../3-blogstranslated/3.8-blog8/><b>3.8. </b>Blog 8
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-blogstranslated/3.9-blog9/ title="Blog 9" class=dd-item><a href=../../3-blogstranslated/3.9-blog9/><b>3.9. </b>Blog 9
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/4-eventparticipated/ title="Events Participated" class=dd-item><a href=../../4-eventparticipated/><b>4. </b>Events Participated
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/ title=Workshop class=dd-item><a href=../../5-workshop/><b>5. </b>Workshop
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/5-workshop/5.1-workshop-overview/ title=Introduction class=dd-item><a href=../../5-workshop/5.1-workshop-overview/><b>5.1. </b>Introduction
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.2-prerequiste/ title=Prerequiste class=dd-item><a href=../../5-workshop/5.2-prerequiste/><b>5.2. </b>Prerequiste
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.3-s3-vpc/ title="Access S3 from VPC" class=dd-item><a href=../../5-workshop/5.3-s3-vpc/><b>5.3. </b>Access S3 from VPC
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/ title="Create a gateway endpoint" class=dd-item><a href=../../5-workshop/5.3-s3-vpc/5.3.1-create-gwe/><b>5.3.1 </b>Create a gateway endpoint
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/ title="Test the Gateway Endpoint" class=dd-item><a href=../../5-workshop/5.3-s3-vpc/5.3.2-test-gwe/><b>5.3.2 </b>Test the Gateway Endpoint
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/5-workshop/5.4-s3-onprem/ title="Access S3 from on-premises" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/><b>5.4. </b>Access S3 from on-premises
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/5-workshop/5.4-s3-onprem/5.4.1-prepare/ title="Prepare the environment" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/5.4.1-prepare/><b>5.4.1 </b>Prepare the environment
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/ title="Create an S3 Interface endpoint" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/><b>5.4.2 </b>Create an S3 Interface endpoint
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/ title="Test the Interface Endpoint" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/><b>5.4.3 </b>Test the Interface Endpoint
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/ title="On-premises DNS Simulation" class=dd-item><a href=../../5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/><b>5.4.4 </b>On-premises DNS Simulation
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/5-workshop/5.5-policy/ title="VPC Endpoint Policies" class=dd-item><a href=../../5-workshop/5.5-policy/><b>5.5. </b>VPC Endpoint Policies
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-workshop/5.6-cleanup/ title="Clean up" class=dd-item><a href=../../5-workshop/5.6-cleanup/><b>5.6. </b>Clean up
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/6-self-evaluation/ title=Self-Assessment class=dd-item><a href=../../6-self-evaluation/><b>6. </b>Self-Assessment
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/7-feedback/ title="Sharing, Contributing Opinions" class=dd-item><a href=../../7-feedback/><b>7. </b>Sharing, Contributing Opinions
+<i class="fas fa-check read-icon"></i></a></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://www.facebook.com/groups/awsstudygroupfcj/><i class='fab fa-facebook'></i> AWS Study Group</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value"><option id=en value=https://nguyenmaivy.github.io/nguyenmaivy/3-blogstranslated/3.7-blog7/ selected>English</option><option id=vi value=https://nguyenmaivy.github.io/nguyenmaivy/vi/3-blogstranslated/3.7-blog7/>Tiếng Việt</option></select><svg id="Capa_1" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><left><b>Workshop</b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title=Migrate alt="web counter" border=0></a><br><b><a href=https://cloudjourney.awsstudygroup.com/>Cloud Journey</a></b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" alt="web counter" border=0>
+</left><left><br><br><b>Last Updated</b><br><i><span id=lastUpdated style=color:orange></span>
+</i><script>const today=new Date,formattedDate=today.toLocaleDateString("en-GB");document.getElementById("lastUpdated").textContent=formattedDate</script></left><left><br><br><b>Team</b><br><i><a href=https://www.facebook.com/groups/660548818043427 style=color:orange>First Cloud Journey</a><br></i></left><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i>
+</a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=../../>Internship Report</a> > <a href=../../3-blogstranslated/>Translated Blogs</a> > Blog 7</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#the-lambda-as-orchestrator-anti-pattern>The Lambda as orchestrator anti-pattern</a></li><li><a href=#rearchitecting-with-step-functions>Rearchitecting with Step Functions</a></li><li><a href=#comparing-lambda-function-as-orchestrator-to-step-functions>Comparing Lambda function as orchestrator to Step Functions</a></li><li><a href=#implementation-considerations>Implementation considerations</a></li><li><a href=#benefits-of-using-step-functions>Benefits of using Step Functions</a></li><li><a href=#conclusion>Conclusion</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Blog 7</h1><h1 id=streamlining-aws-serverless-workflows-from-aws-lambda-orchestration-to-aws-step-functions>Streamlining AWS Serverless workflows: From AWS Lambda orchestration to AWS Step Functions</h1><p>This blog post discusses the <a href=https://aws.amazon.com/lambda/>AWS Lambda</a> as orchestrator <a href=https://docs.aws.amazon.com/lambda/latest/operatorguide/anti-patterns.html>anti-pattern</a> and how to redesign serverless solutions using <a href=https://aws.amazon.com/step-functions/>AWS Step Functions</a> with native integrations.</p><p>Step Functions is a serverless workflow service that you can use to build distributed applications, automate processes, orchestrate microservices, and create data and machine learning (ML) pipelines. Step Functions provides native integrations with over <a href=https://docs.aws.amazon.com/step-functions/latest/dg/connect-to-services.html>200 AWS services</a> in addition to external third-party APIs. You can use these integrations to deploy production-ready solutions with less effort, reducing code complexity, improving long-term maintainability, and minimizing technical debt when operating at scale.</p><hr><h2 id=the-lambda-as-orchestrator-anti-pattern>The Lambda as orchestrator anti-pattern</h2><p>Let’s examine a common anti-pattern: using a Lambda function as an orchestrator for message distribution across multiple channels. Consider this real-world scenario where a system needs to send notifications through SMS or email channels based on user preferences, as shown in the following diagram.</p><p><img src=../../images/3-Blogstranslated/Blog7/anti-pattern.png></p><p>The payload examples for this scenario are:</p><ol><li>Send SMS only:</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;body&#34;: </span>{
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;channel&#34;: </span><span style=color:#e6db74>&#34;sms&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;message&#34;: </span><span style=color:#e6db74>&#34;Hello from AWS Lambda!&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;phoneNumber&#34;: </span><span style=color:#e6db74>&#34;+1234567890&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;metadata&#34;: </span>{
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;priority&#34;: </span><span style=color:#e6db74>&#34;high&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;category&#34;: </span><span style=color:#e6db74>&#34;notification&#34;</span>
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=2><li>Send email only:</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;body&#34;: </span>{
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;channel&#34;: </span><span style=color:#e6db74>&#34;email&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;message&#34;: </span><span style=color:#e6db74>&#34;Hello from AWS Lambda!&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;email&#34;: </span>{
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;to&#34;: </span><span style=color:#e6db74>&#34;recipient@example.com&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;subject&#34;: </span><span style=color:#e6db74>&#34;Test Notification&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;from&#34;: </span><span style=color:#e6db74>&#34;sender@example.com&#34;</span>
+</span></span><span style=display:flex><span>      },
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;metadata&#34;: </span>{
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;priority&#34;: </span><span style=color:#e6db74>&#34;normal&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;category&#34;: </span><span style=color:#e6db74>&#34;notification&#34;</span>
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ol start=3><li>Send both SMS and email:</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;body&#34;: </span>{
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;channel&#34;: </span><span style=color:#e6db74>&#34;email&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;message&#34;: </span><span style=color:#e6db74>&#34;Hello from AWS Lambda!&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;email&#34;: </span>{
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;to&#34;: </span><span style=color:#e6db74>&#34;recipient@example.com&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;subject&#34;: </span><span style=color:#e6db74>&#34;Test Notification&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;from&#34;: </span><span style=color:#e6db74>&#34;sender@example.com&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;metadata&#34;: </span>{
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;priority&#34;: </span><span style=color:#e6db74>&#34;normal&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;category&#34;: </span><span style=color:#e6db74>&#34;notification&#34;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Here’s how it typically starts—with a Lambda function acting as an orchestrator:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#ae81ff>import boto3</span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>import json</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Initialize Lambda client</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># You can specify region if needed: boto3.client(&#39;lambda&#39;, region_name=&#39;us-east-1&#39;)</span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>lambda_client = boto3.client(&#39;lambda&#39;)</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>def lambda_handler(event, context)</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>try</span>:
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Parse the incoming event</span>
+</span></span><span style=display:flex><span>        <span style=color:#ae81ff>body = json.loads(event[&#39;body&#39;])</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Validate required fields</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>if &#39;channel&#39; not in body</span>:
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>return {</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#39;statusCode&#39;</span>: <span style=color:#ae81ff>400</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#39;body&#39;</span>: <span style=color:#ae81ff>json.dumps(&#39;Missing channel parameter&#39;)</span>
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#f92672>if &#39;message&#39; not in body</span>:
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>return {</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#39;statusCode&#39;</span>: <span style=color:#ae81ff>400</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#39;body&#39;</span>: <span style=color:#ae81ff>json.dumps(&#39;Missing message content&#39;)</span>
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#f92672>if body[&#39;channel&#39;] == &#39;both&#39;</span>:
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Invoke SMS Lambda function</span>
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>lambda_client.invoke(</span>
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>FunctionName=&#39;send-sns&#39;,</span>
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>InvocationType=&#39;Event&#39;,</span>
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>Payload=json.dumps(body)</span>
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>)</span>
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Invoke Email Lambda function</span>
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>lambda_client.invoke(</span>
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>FunctionName=&#39;send-email&#39;,</span>
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>InvocationType=&#39;Event&#39;,</span>
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>Payload=json.dumps(body)</span>
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>)</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>else</span>:
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Validate channel value</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>if body[&#39;channel&#39;] not in [&#39;sms&#39;, &#39;email&#39;]</span>:
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>return {</span>
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>&#39;statusCode&#39;</span>: <span style=color:#ae81ff>400</span>,
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>&#39;body&#39;</span>: <span style=color:#ae81ff>json.dumps(&#39;Invalid channel specified&#39;)</span>
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Invoke function based on specified channel</span>
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>function_name = &#39;send-sns&#39; if body[&#39;channel&#39;] == &#39;sms&#39; else &#39;send-email&#39;</span>
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>lambda_client.invoke(</span>
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>FunctionName=function_name,</span>
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>InvocationType=&#39;Event&#39;,</span>
+</span></span><span style=display:flex><span>                <span style=color:#ae81ff>Payload=json.dumps(body)</span>
+</span></span><span style=display:flex><span>            <span style=color:#ae81ff>)</span>
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#ae81ff>return {</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#39;statusCode&#39;</span>: <span style=color:#ae81ff>200</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#39;body&#39;</span>: <span style=color:#ae81ff>json.dumps(&#39;Messages sent successfully&#39;)</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    <span style=color:#f92672>except json.JSONDecodeError</span>:
+</span></span><span style=display:flex><span>        <span style=color:#ae81ff>return {</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#39;statusCode&#39;</span>: <span style=color:#ae81ff>400</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#39;body&#39;</span>: <span style=color:#ae81ff>json.dumps(&#39;Invalid JSON in request body&#39;)</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    <span style=color:#f92672>except Exception as e</span>:
+</span></span><span style=display:flex><span>        <span style=color:#ae81ff>return {</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#39;statusCode&#39;</span>: <span style=color:#ae81ff>500</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#39;body&#39;: json.dumps(f&#39;Error</span>: {<span style=color:#ae81ff>str(e)}&#39;)</span>
+</span></span><span style=display:flex><span>        }
+</span></span></code></pre></div><p>This approach has the following problems:</p><ul><li><strong>IntrinsicComplex error handling</strong>: The orchestrator needs to manage errors from multiple function invocations.</li><li><strong>Tight coupling</strong>: Functions are directly dependent on each other.</li><li><strong>Limited execution time</strong>: The orchestrator Lambda function continues running while sub Lambda functions execute. This could lead to the orchestrator Lambda function timing out.</li><li><strong>Idle resources</strong>:Because the orchestrator Lambda function is sitting idle waiting for returns from other Lambda functions, in this case, the user is <a href=https://aws.amazon.com/lambda/pricing/>now paying</a> for idle resources.</li></ul><hr><h2 id=rearchitecting-with-step-functions>Rearchitecting with Step Functions</h2><p>You can rebuild the logic using Step Functions and <a href=https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html>Amazon States Language</a> to replace the Lambda orchestrator function. You can use the <a href=https://docs.aws.amazon.com/step-functions/latest/dg/state-choice.html>Choice state</a> in Amazon States Language to define logical conditions to follow a specific path. This approach reduces code maintenance complexity because you define the conditions using Amazon States Language. You can also use it to to extend the functionality with minimal changes to the codebase.</p><p>The following Step Functions workflow diagram shows the rearchitected version of the previous Orchestrator Lambda function:</p><p><img src=../../images/3-Blogstranslated/Blog7/step-functions.png></p><p>The following Amazon State Language represents the workflow:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;Comment&#34;: </span><span style=color:#e6db74>&#34;Multi-channel notification workflow&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;StartAt&#34;: </span><span style=color:#e6db74>&#34;ValidateInput&#34;</span>,
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;States&#34;: </span>{
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;ValidateInput&#34;: </span>{
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Choice&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Choices&#34;: </span>[
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;And&#34;: </span>[
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Variable&#34;: </span><span style=color:#e6db74>&#34;$.message&#34;</span>,
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;IsPresent&#34;: </span><span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>            },
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Variable&#34;: </span><span style=color:#e6db74>&#34;$.channel&#34;</span>,
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;IsPresent&#34;: </span><span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>          ],
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Next&#34;: </span><span style=color:#e6db74>&#34;DetermineChannel&#34;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      ],
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Default&#34;: </span><span style=color:#e6db74>&#34;ValidationError&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;ValidationError&#34;: </span>{
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Fail&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Error&#34;: </span><span style=color:#e6db74>&#34;ValidationError&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Cause&#34;: </span><span style=color:#e6db74>&#34;Required fields missing: message and/or channel&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;DetermineChannel&#34;: </span>{
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Choice&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Choices&#34;: </span>[
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Variable&#34;: </span><span style=color:#e6db74>&#34;$.channel&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;StringEquals&#34;: </span><span style=color:#e6db74>&#34;both&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Next&#34;: </span><span style=color:#e6db74>&#34;ParallelNotification&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Variable&#34;: </span><span style=color:#e6db74>&#34;$.channel&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;StringEquals&#34;: </span><span style=color:#e6db74>&#34;sms&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Next&#34;: </span><span style=color:#e6db74>&#34;SendSMSOnly&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Variable&#34;: </span><span style=color:#e6db74>&#34;$.channel&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;StringEquals&#34;: </span><span style=color:#e6db74>&#34;email&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Next&#34;: </span><span style=color:#e6db74>&#34;SendEmailOnly&#34;</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      ],
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Default&#34;: </span><span style=color:#e6db74>&#34;FailState&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;ParallelNotification&#34;: </span>{
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Parallel&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Branches&#34;: </span>[
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;StartAt&#34;: </span><span style=color:#e6db74>&#34;SendSMS&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;States&#34;: </span>{
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;SendSMS&#34;: </span>{
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Resource&#34;: </span><span style=color:#e6db74>&#34;arn:aws:states:::sns:publish&#34;</span>,
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Parameters&#34;: </span>{
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;Message.$&#34;: </span><span style=color:#e6db74>&#34;$.message&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;PhoneNumber.$&#34;: </span><span style=color:#e6db74>&#34;$.phoneNumber&#34;</span>
+</span></span><span style=display:flex><span>              },
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;End&#34;: </span><span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>          }
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;StartAt&#34;: </span><span style=color:#e6db74>&#34;SendEmail&#34;</span>,
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;States&#34;: </span>{
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;SendEmail&#34;: </span>{
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Parameters&#34;: </span>{
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;FromEmailAddress.$&#34;: </span><span style=color:#e6db74>&#34;$.email.from&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;Destination&#34;: </span>{
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>&#34;ToAddresses.$&#34;: </span><span style=color:#e6db74>&#34;States.Array($.email.to)&#34;</span>,
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>&#34;CcAddresses.$&#34;: </span><span style=color:#e6db74>&#34;States.ArrayGetItem(States.JsonToString($.email.cc), $)&#34;</span>,
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>&#34;BccAddresses.$&#34;: </span><span style=color:#e6db74>&#34;States.ArrayGetItem(States.JsonToString($.email.bcc), $)&#34;</span>
+</span></span><span style=display:flex><span>                },
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;Content&#34;: </span>{
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>&#34;Simple&#34;: </span>{
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>&#34;Subject&#34;: </span>{
+</span></span><span style=display:flex><span>                      <span style=color:#f92672>&#34;Data.$&#34;: </span><span style=color:#e6db74>&#34;$.email.subject&#34;</span>,
+</span></span><span style=display:flex><span>                      <span style=color:#f92672>&#34;Charset&#34;: </span><span style=color:#e6db74>&#34;UTF-8&#34;</span>
+</span></span><span style=display:flex><span>                    },
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>&#34;Body&#34;: </span>{
+</span></span><span style=display:flex><span>                      <span style=color:#f92672>&#34;Text&#34;: </span>{
+</span></span><span style=display:flex><span>                        <span style=color:#f92672>&#34;Data.$&#34;: </span><span style=color:#e6db74>&#34;$.message&#34;</span>,
+</span></span><span style=display:flex><span>                        <span style=color:#f92672>&#34;Charset&#34;: </span><span style=color:#e6db74>&#34;UTF-8&#34;</span>
+</span></span><span style=display:flex><span>                      },
+</span></span><span style=display:flex><span>                      <span style=color:#f92672>&#34;Html&#34;: </span>{
+</span></span><span style=display:flex><span>                        <span style=color:#f92672>&#34;Data.$&#34;: </span><span style=color:#e6db74>&#34;$.email.htmlBody&#34;</span>,
+</span></span><span style=display:flex><span>                        <span style=color:#f92672>&#34;Charset&#34;: </span><span style=color:#e6db74>&#34;UTF-8&#34;</span>
+</span></span><span style=display:flex><span>                      }
+</span></span><span style=display:flex><span>                    }
+</span></span><span style=display:flex><span>                  }
+</span></span><span style=display:flex><span>                },
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;ReplyToAddresses.$&#34;: </span><span style=color:#e6db74>&#34;States.Array($.email.replyTo)&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;EmailTags&#34;: </span>[
+</span></span><span style=display:flex><span>                  {
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>&#34;Name&#34;: </span><span style=color:#e6db74>&#34;channel&#34;</span>,
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>&#34;Value&#34;: </span><span style=color:#e6db74>&#34;email&#34;</span>
+</span></span><span style=display:flex><span>                  },
+</span></span><span style=display:flex><span>                  {
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>&#34;Name&#34;: </span><span style=color:#e6db74>&#34;messageType&#34;</span>,
+</span></span><span style=display:flex><span>                    <span style=color:#f92672>&#34;Value.$&#34;: </span><span style=color:#e6db74>&#34;$.email.messageType&#34;</span>
+</span></span><span style=display:flex><span>                  }
+</span></span><span style=display:flex><span>                ],
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;ConfigurationSetName.$&#34;: </span><span style=color:#e6db74>&#34;$.email.configurationSet&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;ListManagementOptions&#34;: </span>{
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>&#34;ContactListName.$&#34;: </span><span style=color:#e6db74>&#34;$.email.contactList&#34;</span>,
+</span></span><span style=display:flex><span>                  <span style=color:#f92672>&#34;TopicName.$&#34;: </span><span style=color:#e6db74>&#34;$.email.topic&#34;</span>
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>              },
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Resource&#34;: </span><span style=color:#e6db74>&#34;arn:aws:states:::aws-sdk:sesv2:sendEmail&#34;</span>,
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;End&#34;: </span><span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>          }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      ],
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;End&#34;: </span><span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;SendSMSOnly&#34;: </span>{
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Resource&#34;: </span><span style=color:#e6db74>&#34;arn:aws:states:::sns:publish&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Parameters&#34;: </span>{
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;Message.$&#34;: </span><span style=color:#e6db74>&#34;$.message&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;PhoneNumber.$&#34;: </span><span style=color:#e6db74>&#34;$.phoneNumber&#34;</span>
+</span></span><span style=display:flex><span>      },
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;End&#34;: </span><span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;SendEmailOnly&#34;: </span>{
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Parameters&#34;: </span>{
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;FromEmailAddress.$&#34;: </span><span style=color:#e6db74>&#34;$.email.from&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;Destination&#34;: </span>{
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;ToAddresses.$&#34;: </span><span style=color:#e6db74>&#34;States.Array($.email.to)&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;Content&#34;: </span>{
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&#34;Simple&#34;: </span>{
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;Subject&#34;: </span>{
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Data.$&#34;: </span><span style=color:#e6db74>&#34;$.email.subject&#34;</span>,
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Charset&#34;: </span><span style=color:#e6db74>&#34;UTF-8&#34;</span>
+</span></span><span style=display:flex><span>            },
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;Body&#34;: </span>{
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Text&#34;: </span>{
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;Data.$&#34;: </span><span style=color:#e6db74>&#34;$.message&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;Charset&#34;: </span><span style=color:#e6db74>&#34;UTF-8&#34;</span>
+</span></span><span style=display:flex><span>              },
+</span></span><span style=display:flex><span>              <span style=color:#f92672>&#34;Html&#34;: </span>{
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;Data.$&#34;: </span><span style=color:#e6db74>&#34;$.email.htmlBody&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;Charset&#34;: </span><span style=color:#e6db74>&#34;UTF-8&#34;</span>
+</span></span><span style=display:flex><span>              }
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>          }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>      },
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Resource&#34;: </span><span style=color:#e6db74>&#34;arn:aws:states:::aws-sdk:sesv2:sendEmail&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;End&#34;: </span><span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;FailState&#34;: </span>{
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Fail&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;Cause&#34;: </span><span style=color:#e6db74>&#34;Invalid channel specified&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This Step Functions implementation offers several advantages:</p><ul><li><strong>Native service integration</strong>: Direct integration with <a href=https://aws.amazon.com/sns>Amazon Simple Notification Service (Amazon SNS)</a>, <a href=https://aws.amazon.com/ses>Amazon Simple Email Service (Amazon SES)</a>, <a href=https://aws.amazon.com/dynamodb>Amazon DynamoDB</a>, and <a href=https://aws.amazon.com/cloudwatch>Amazon CloudWatch</a> eliminates the need for wrapper Lambda functions</li><li><strong>Visual workflow</strong>: The execution flow is visible and maintainable through the AWS Management Console</li><li><strong>Built-in error handling</strong>: Retry policies and error states can be defined declaratively</li><li><strong>Parallel execution</strong>: The Parallel state handles multiple channel delivery efficiently</li><li><strong>Simplified logic</strong>: The Choice state replaces complex if-else statements</li><li><strong>Centralized data flow</strong>: Input and output are managed consistently across states</li><li><strong>Enhanced workflow duration capabilities</strong>: Step Functions Standard workflows support executions that run for up to one year, compared to the 15-minute maximum execution time for Lambda functions</li></ul><hr><h2 id=comparing-lambda-function-as-orchestrator-to-step-functions>Comparing Lambda function as orchestrator to Step Functions</h2><p>The summary of different features implemented on Lambda function as orchestrator and Step Functions is reflected in the following table:</p><table><thead><tr><th style=text-align:left>Feature</th><th style=text-align:left>Lambda function as orchestrator</th><th style=text-align:left>Step Functions</th></tr></thead><tbody><tr><td style=text-align:left><strong>Orchestration logic</strong></td><td style=text-align:left>Implemented in Python with nested if-else statements.</td><td style=text-align:left>Defined declaratively using the Choice state</td></tr><tr><td style=text-align:left><strong>Multi-channel delivery</strong></td><td style=text-align:left>Sequential function invocations. Parallel execution using function&rsquo;s logic.</td><td style=text-align:left>Parallel execution using the Parallel state</td></tr><tr><td style=text-align:left><strong>Service integration</strong></td><td style=text-align:left>Requires SDK calls or separate Lambda functions.</td><td style=text-align:left>Direct integration with AWS services (Amazon SNS, DynamoDB)</td></tr><tr><td style=text-align:left><strong>Error handling</strong></td><td style=text-align:left>Custom try-except blocks in Python.</td><td style=text-align:left>Built-in error states and retry policies</td></tr><tr><td style=text-align:left><strong>Data persistence</strong></td><td style=text-align:left>Custom code to interact with DynamoDB.</td><td style=text-align:left>Native DynamoDB integration with putItem task</td></tr><tr><td style=text-align:left><strong>Metrics logging</strong></td><td style=text-align:left>Custom code to call CloudWatch.</td><td style=text-align:left>CloudWatch Metrics SDK integration</td></tr></tbody></table><hr><h2 id=implementation-considerations>Implementation considerations</h2><p>Review the following considerations when re-architecting a Lambda function orchestrator to Step Functions:</p><ul><li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/choosing-workflow-type.html>State machine type</a>: Choose between Standard (up to 1 year runtime) and Express (up to 5 minutes) workflows based on your needs.</li><li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/concepts-input-output-filtering.html>Input/output management</a>: Parameters manipulation reduces the development effort and give flexible alternatives to implement the workflow:<ul><li>Parameters: Selects specific input fields to pass to the next state</li><li>ResultSelector: Filters the state response to include only relevant fields</li><li>ResultPath: Stores the processed result in a specific path of the state input</li><li>OutputPath: Determines what data passes to the next state</li></ul></li></ul><p>A code snippet for these features is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#34;ProcessOrder&#34;: </span>{
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;Type&#34;: </span><span style=color:#e6db74>&#34;Task&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;Resource&#34;: </span><span style=color:#e6db74>&#34;arn:aws:states:::lambda:invoke&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;Parameters&#34;: </span>{
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;FunctionName&#34;: </span><span style=color:#e6db74>&#34;ProcessOrderFunction&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;Payload&#34;: </span>{
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;orderId.$&#34;: </span><span style=color:#e6db74>&#34;$.orderId&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;customerId.$&#34;: </span><span style=color:#e6db74>&#34;$.customerId&#34;</span>
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;ResultSelector&#34;: </span>{
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;orderStatus.$&#34;: </span><span style=color:#e6db74>&#34;$.Payload.status&#34;</span>,
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&#34;processedDate.$&#34;: </span><span style=color:#e6db74>&#34;$.Payload.timestamp&#34;</span>
+</span></span><span style=display:flex><span>        },
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;ResultPath&#34;: </span><span style=color:#e6db74>&#34;$.orderProcessing&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;OutputPath&#34;: </span><span style=color:#e6db74>&#34;$.orderProcessing&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;Next&#34;: </span><span style=color:#e6db74>&#34;NotifyCustomer&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><ul><li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/concepts-error-handling.html>Error handling</a>: Implement retry policies and catch errors at both the task and state machine levels.</li><li><a href=https://docs.aws.amazon.com/step-functions/latest/dg/procedure-cw-metrics.html>Monitoring</a>: Set up CloudWatch logs and metrics for your state machine to track executions and performance.</li></ul><hr><h2 id=benefits-of-using-step-functions>Benefits of using Step Functions</h2><p>Using Step Functions for rearchitecting scenarios bring the following benefits:</p><ul><li><strong>Reduced code complexity</strong>: The business logic is now defined in Amazon States Language rather than distributed across multiple Lambda functions.</li><li><strong>Improved maintainability</strong>: Developers can make workflow changes by modifying the Amazon States Language, often modifying several Lambda functions.</li><li><strong>Native AWS service integrations</strong>: Step Functions offers direct integrations with over 200 AWS services, which you can use to connect and coordinate AWS resources without writing custom integration code.</li><li><strong>Cost optimization</strong>: By using direct service integrations, there are fewer Lambda invocations and reduced costs.</li><li><strong>Long-running processes</strong>: Step Functions can manage workflows that run for up to a year, beyond the 15-minute limit for Lambda functions.</li></ul><hr><h2 id=conclusion>Conclusion</h2><p>Rearchitecting Lambda-based applications with Step Functions can significantly improve maintainability, scalability, and operational efficiency. By moving orchestration logic into Step Functions and using its native service integrations, you can create more robust and manageable serverless applications.</p><p>While this post focused on a message distribution workflow, the principles apply to many serverless architectures. As you develop your applications, consider how Step Functions can help you build more resilient and scalable solutions.</p><p>To learn more about serverless architectures visit <a href=https://serverlessland.com/>Serverless Land</a>.</p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=../../3-blogstranslated/3.6-blog6/ title="Blog 5"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=../../3-blogstranslated/3.8-blog8/ title="Blog 8" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=../../js/clipboard.min.js?1765465501></script><script src=../../js/perfect-scrollbar.min.js?1765465501></script><script src=../../js/perfect-scrollbar.jquery.min.js?1765465501></script><script src=../../js/jquery.sticky.js?1765465501></script><script src=../../js/featherlight.min.js?1765465501></script><script src=../../js/highlight.pack.js?1765465501></script><script>hljs.initHighlightingOnLoad()</script><script src=../../js/modernizr.custom-3.6.0.js?1765465501></script><script src=../../js/learn.js?1765465501></script><script src=../../js/hugo-learn.js?1765465501></script><link href=../../mermaid/mermaid.css?1765465501 rel=stylesheet><script src=../../mermaid/mermaid.js?1765465501></script><script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,(e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date),(i=t.createElement(n),a=t.getElementsByTagName(n)[0]),i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-158079754-2","auto"),ga("send","pageview")</script></body></html>
